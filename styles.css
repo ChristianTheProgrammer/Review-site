@@ -46,6 +46,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* ?///////////////////////////////////////////////////////////// */
+/* ?///////////////////////////////////////////////////////////// */
+/* ?///////////////////////////////////////////////////////////// */
+/* ?///////////////////////////////////////////////////////////// */
+/* ?///////////////////////////////////////////////////////////// */
+/* ?///////////////////////////////////////////////////////////// */
+/* ?///////////////////////////////////////////////////////////// */
+/* ?///////////////////////////////////////////////////////////// */
+/* ?///////////////////////////////////////////////////////////// */
+/* ?///////////////////////////////////////////////////////////// */
+/* ?///////////////////////////////////////////////////////////// */
+
 /* Page content */
 
 body{
@@ -54,7 +66,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: 'Gochi Hand';
+    font-family: 'Roboto';
     background-color: #00254A;
 }
 
@@ -62,36 +74,42 @@ body{
  border: 3px solid black;
  height: 300px;
  background-color: #003162;
- border-radius: 50px;
+ border-radius: 30px;
  width: auto;
  box-shadow:-2px -2px 20px 6px rgba(0, 255, 64, 0.5);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ animation: glow 10s ease-in-out infinite;
 
 }
 .starContainer{
- border: 3px solid rgb(255, 25, 25);
- height: 200px;
+ height: 80px;
  display: flex;
  align-items: center;
  flex-direction: row-reverse;
-justify-content: center;
+ justify-content: center;
 
 }
 
-
-.h2{
-border: 3px solid rgb(243, 0, 231);
-display: flex;
-justify-content: center;
-font-size: 30px;
-font-weight: 900;
-text-transform: capitalize;
-color: #87E436;
-width: auto;
-height: auto;
-padding: 20px;
-text-align: center;
-}
-
+img{
+    width: auto;
+    height: 16%;
+    width: 25%;
+    margin-top: 13px;
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px 0 rgba(0, 255, 64, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px 10px rgba(0, 255, 64, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px 0 rgba(0, 255, 64, 0.5);
+    }
+  }
 .container .starContainer input{
 display: none;
 }
@@ -100,8 +118,8 @@ display: none;
     color: #444;
     transition: all .2s ease;
     display: flex;
-    width: 40%;
     justify-content: center;
+    
 }
 input:not(:checked) ~ label:hover,
 input:not(:checked) ~ label:hover ~label{
@@ -114,23 +132,39 @@ input:checked ~ label{
 }
 input#rate-5:checked ~ label{
     color: #fe7;
-    text-shadow: 0 0 20px #952;
+    text-shadow: 0 0 20px rgb(220, 95, 0);
+}
+
+.h2{
+display: flex;
+justify-content: center;
+font-size: 30px;
+font-weight: 900;
+text-transform: capitalize;
+color: #87E436;
+width: auto;
+height: auto;
+padding: 20px;
+text-align: center;
+}
+
+
+.socaiMedia{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    color: #87E436;
+
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+a{
+text-decoration: none;
+color: #87E436;
+}
 
 
 
@@ -160,15 +194,44 @@ input#rate-5:checked ~ label{
     
 
         body{
-            width: 100vi;
         }
         .container{
-            border: 3px solid black;
-            height: 300px;
+            height: 100%;
             background-color: #003162;
-            border-radius: 50px;
+            border-radius: 0px;
             width: 100%;
             box-shadow:-2px -2px 20px 6px rgba(0, 255, 64, 0.5);
-           
+            display: flex;
+            flex-direction: none;
+            align-items: center;
+            justify-content: space-evenly;
            }    
+
+           img{
+            width: auto;
+            height: 80px;
+            width: 249px;      
+            margin-top: 13px;
+        }
+
+        .starContainer{
+            height: none;
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: center;
+           
+           }
+           .h2{
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 900;
+            text-transform: capitalize;
+            color: #87E436;
+            width: auto;
+            height: auto;
+            padding: 20px;
+            text-align: center;
+            }
 }
